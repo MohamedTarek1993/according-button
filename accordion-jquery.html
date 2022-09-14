@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrab library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+        integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- bootstrab library -->
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- google font -->
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+            margin: 40px auto;
+            font-weight: 700;
+            font-family: 'Cairo', sans-serif;
+            color: #161615;
+            text-transform: capitalize;
+
+        }
+
+        .section_anawser_qus {
+            padding: 5% 0;
+            position: relative;
+        }
+
+        .section_anawser_qus .box_1 {
+            margin-bottom: 3%;
+        }
+
+        .section_anawser_qus .question {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            color: #B7999C;
+            background-color: #DFE0E2;
+            border: 1px solid #071013;
+            border-radius: 5px;
+            box-shadow: -9px 19px 15px -7px rgba(223, 224, 226, 0.75);
+            -webkit-box-shadow: -9px 19px 15px -7px rgba(223, 224, 226, 0.75);
+            -moz-box-shadow: -9px 19px 15px -7px rgba(223, 224, 226, 0.75);
+            padding: 3% 4%;
+        }
+
+        .section_anawser_qus .question h2 {
+            font-size: 1.5rem;
+            font-family: 'bold';
+        }
+
+        .section_anawser_qus .question i {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .section_anawser_qus .anws {
+            background-color: #f0f0f0;
+            padding: 4% 2%;
+            border: 1px solid #071013;
+            margin: 2% 0;
+            border-radius: 5px;
+        }
+
+        .section_anawser_qus .anws p {
+            font-size: 1.3rem;
+            font-family: 'regular';
+            color: #EB5160;
+        }
+
+        .bi-dash-circle {
+            color: #EB5160;
+        }
+
+        .bi-plus-circle {
+            color: #1CE911;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>accordion button with jquery</h1>
+    <div class="section_anawser_qus">
+        <div class="container">
+            <div class="box_1">
+                <div id="ques1" class="question">
+                    <h2> هل صليت علي النبي اليوم </h2>
+                    <i onclick="showDrop(1)" class="bi bi-plus-circle"></i>
+                    <i onclick="hideDrop(1)" style="display: none;" class="bi bi-dash-circle"></i>
+                </div>
+                <div style="display: none;" class="anws" id="dropMenu1">
+                    <p>الحمد لله </p>
+                </div>
+            </div>
+
+
+            <div class="box_1">
+                <div id="ques3" class="question">
+                    <h2> هل صليت علي النبي اليوم </h2>
+                    <i onclick="showDrop(3)" class="bi bi-plus-circle"></i>
+                    <i onclick="hideDrop(3)" style="display: none;" class="bi bi-dash-circle"></i>
+                </div>
+                <div style="display: none;" class="anws" id="dropMenu3">
+                    <p>الحمد لله </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function showDrop(id) {
+            $(`#dropMenu${id}`).slideToggle('slow');
+            $(`#ques${id} .bi-plus-circle`).css("display", "none");
+            $(`#ques${id} .bi-dash-circle`).css("display", "block");
+
+
+        }
+        function hideDrop(id) {
+            $(`#dropMenu${id}`).slideToggle('slow');
+            $(`#ques${id} .bi-dash-circle`).css("display", "none");
+            $(`#ques${id} .bi-plus-circle`).css("display", "block");
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

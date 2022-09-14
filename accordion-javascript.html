@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrab library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+        integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- bootstrab library -->
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- google font -->
+
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></script>
+        <!-- font awesome -->
+
+
+    <style>
+        section-center {
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .question {
+            width:500px;
+            border: 1px solid white;
+            border-radius: 10px;
+            margin: 20px auto;
+            transition: all 0.3s;
+            background-color: white;
+            transition: .25s all ease-in-out;
+
+        }
+
+        .question p {
+            margin: 0;
+            text-transform: capitalize;
+            color: #21a7d0;
+        }
+
+        .question-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;
+            padding: 3% 2%;
+        }
+
+        .question-btn {
+            padding: 0;
+            margin: 0;
+            color: #21a7d0;
+            transition: all 0.3s;
+        }
+
+        /* .question-btn :hover{
+            transform: rotateX(90deg);
+        } */
+        .question-btn:focus {
+            box-shadow: none;
+        }
+
+        .setting .info input:focus {
+            box-shadow: none;
+        }
+
+        /* show and disappear text */
+
+        .question-text {
+            display: none;
+            padding: 1% 2%;
+            border-top: 1px solid #ccc;
+            transition: .25s all ease-in-out;
+
+        }
+
+        .show-text .question-text {
+            display: block;
+            transition: .5s all ease-in-out;
+
+        }
+
+        /* show and disappear text */
+
+        /* show and disappear icon */
+        .minus-icon {
+            display: none;
+        }
+
+        .show-text .minus-icon {
+            display: inline;
+        }
+
+        .show-text .plus-icon {
+            display: none;
+        }
+
+        /* show and disappear icon */
+    </style>
+</head>
+
+<body>
+
+    <h1>accordion button with javascript</h1>
+
+    <section class="toggle">
+        <div class="section-center">
+            <article class="question ">
+                <div class="question-title">
+                    <p>do you love football?</p>
+                    <button type="button" class=" btn question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quos voluptates quasi quis, earum
+                        praesentium, minima quidem fugit iste dolorum est deleniti consequuntur labore neque ex
+                        distinctio aliquam, libero sunt!
+                    </p>
+                </div>
+            </article>
+            <article class="question">
+                <div class="question-title">
+                    <p>do you love football?</p>
+                    <button type="button" class=" btn question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quos voluptates quasi quis, earum
+                        praesentium, minima quidem fugit iste dolorum est deleniti consequuntur labore neque ex
+                        distinctio aliquam, libero sunt!
+                    </p>
+                </div>
+            </article>
+            <article class="question">
+                <div class="question-title">
+                    <p>do you love handball?</p>
+                    <button type="button" class=" btn question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quos voluptates quasi quis, earum
+                        praesentium, minima quidem fugit iste dolorum est deleniti consequuntur labore neque ex
+                        distinctio aliquam, libero sunt!
+                    </p>
+                </div>
+            </article>
+            <article class="question">
+                <div class="question-title">
+                    <p>do you love basketball?</p>
+                    <button type="button" class=" btn question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quos voluptates quasi quis, earum
+                        praesentium, minima quidem fugit iste dolorum est deleniti consequuntur labore neque ex
+                        distinctio aliquam, libero sunt!
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <script>
+        const toggleEle = document.querySelectorAll('.question-btn');
+        toggleEle.forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                const question = e.currentTarget.parentElement.parentElement
+
+                question.classList.toggle('show-text');
+            });
+        });
+    </script>
+</body>
+
+</html>
