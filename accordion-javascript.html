@@ -34,12 +34,12 @@
         }
 
         .question {
-            width:500px;
-            border: 1px solid white;
+            width:700px;
+            border: 1px solid #ccc;
             border-radius: 10px;
             margin: 20px auto;
             transition: all 0.3s;
-            background-color: white;
+            background-color: #ccc;
             transition: .25s all ease-in-out;
 
         }
@@ -106,6 +106,17 @@
         .show-text .plus-icon {
             display: none;
         }
+        .code_link{
+            text-align: center;
+            margin: 20px 0;
+        }
+        .code_link a{
+            font-weight: 700;
+            font-family: 'Cairo', sans-serif;
+            color: #161615;
+            text-decoration: none;
+            font-size: 2rem;
+        }
 
         /* show and disappear icon */
     </style>
@@ -113,7 +124,7 @@
 
 <body>
 
-    <h1>accordion button with javascript</h1>
+    <h1 class="text-center">accordion button with javascript</h1>
 
     <section class="toggle">
         <div class="section-center">
@@ -195,7 +206,9 @@
             </article>
         </div>
     </section>
-
+   <div class="code_link">
+    <a href="https://lnkd.in/d2dAASgN" target="_blank">Code Pen Link</a>
+   </div>
     <script>
         const toggleEle = document.querySelectorAll('.question-btn');
         toggleEle.forEach(function (btn) {
